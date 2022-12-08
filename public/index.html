@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkinGuru</title>
+    <!-- stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div id="nav-placeholder"></div>
+        <script>
+          $(function () {
+            $("#nav-placeholder").load("nav.html");
+          });
+        </script>
+      </nav>
+    </header>
+    <section class="content">
+      <webtitle>
+        <h1>Coming soon...</h1>
+      </webtitle>
+    </section>
+  </body>
+  <!--footer class="footer">
+    <div id="rotate-text">⋺</div>
+    <div href="/legal.html" id="topright" title="Legal">Legal</div>
+    <div href="/legal.html" id="topright" title="Legal">Legal</div>
+  </footer-->
+  <ftr>
+    <div id="footer-placeholder"></div>
+    <script>
+      $(function () {
+        $("#footer-placeholder").load("footer.html");
+      });
+    </script>
+  </ftr>
+</html>
