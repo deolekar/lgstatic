@@ -28,15 +28,33 @@
     </header>
     <section class="content">
       <webtitle>
-        <h1>Coming soon...</h1>
+        <h1>Linkin search</h1>
       </webtitle>
+      <form class="formLkp" id="formLkp" method="post" >
+        <div id="idTrgt" onclick="return submitUserForm();">
+          <input type="text" id="quantity" name="sourceUrl" placeholder="Your URL" />
+          <span id="idSearch" class="search-linkin material-icons" style="display: none;" >search</span> </br>
+            <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfIwZUjAAAAAK52Fa_zecbSoK2ijBnceMHaXUYc" data-callback="verifyCaptcha"></div>
+            
+            <div id="g-recaptcha-error"></div>
+          <div id="review_recaptcha"></div>
+          <div class="box">         <div class="box"></div>
+            <target>
+              <a target="_blank" id="idTarget" href="https://www.linkinguru.com" class="urlTarget">
+              </a>
+            </target>
+            <span id="idTargetIcon" title="Verification Status" class="material-icons1 "></span>
+          </div>
+          </br>
+          <span id="idTargetUrl" class="text lowlight"></span>
+        </div>
+        </div>
+        <p class="error"></p>
+        </div>
+      </form>
+  
     </section>
   </body>
-  <!--footer class="footer">
-    <div id="rotate-text">⋺</div>
-    <div href="/legal.html" id="topright" title="Legal">Legal</div>
-    <div href="/legal.html" id="topright" title="Legal">Legal</div>
-  </footer-->
   <ftr>
     <div id="footer-placeholder"></div>
     <script>
@@ -45,4 +63,81 @@
       });
     </script>
   </ftr>
+
+  <!--script type="text/javascript">
+      var review_recaptcha_widget;
+      var onloadCallback = function() {
+        console.log("in captcha");
+        if($('#review_recaptcha').length) {
+            review_recaptcha_widget = grecaptcha.render('review_recaptcha', {
+              'sitekey' : '6LfIwZUjAAAAAK52Fa_zecbSoK2ijBnceMHaXUYc'
+            });
+        }
+      };      
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script-->
+
+
+<!--form method="post" onsubmit="return submitUserForm();">
+  <div class="g-recaptcha" data-sitekey="6LfIwZUjAAAAAK52Fa_zecbSoK2ijBnceMHaXUYc" data-callback="verifyCaptcha"></div>
+  <div id="g-recaptcha-error"></div>
+  <input type="submit" name="submit" value="Submit" />
+</form-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+var recaptcha_response = '';
+function submitUserForm() {
+  if(recaptcha_response.length == 0) {
+      document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">We know you are not robot, but we cannot argue with our manager. </span>';
+      return false;
+  }
+  return true;
+}
+
+function verifyCaptcha(token) {
+  recaptcha_response = token;
+  document.getElementById('g-recaptcha-error').innerHTML = '';
+  document.getElementById("idSearch").style.display = "inline";
+  document.getElementById("g-recaptcha").style.display = "none";
+}
+</script>
+
+  </script>
+  </script>
+  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.7.0/firebase-functions.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="js/staticApp.js"></script>
+  <!--script src="/js/fetch/api.js"></script-->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import {
+      getAnalytics,
+      logEvent,
+    } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    //import { getAnalytics, logEvent } from "firebase/analytics";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD42WGXuff55DmePy9ENcZF7Q1Lb9xbgJ4",
+      authDomain: "linkinguru22-b6df4.firebaseapp.com",
+      projectId: "linkinguru22-b6df4",
+      storageBucket: "linkinguru22-b6df4.appspot.com",
+      messagingSenderId: "402464233259",
+      appId: "1:402464233259:web:dc17710149371547df176e",
+      measurementId: "G-0XDF7ZFVB2",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    let myContext = "AD: Init";
+    const analytics = getAnalytics(app);
+    window.logMyEvent = function logMe(myContext) {
+      logEvent(analytics, myContext, {
+        content_type: "image",
+        content_id: "P12453",
+      });
+    };
+  </script>
 </html>

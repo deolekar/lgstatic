@@ -136,6 +136,7 @@ display: inline-flex;
 /* content styles */
 .content {
   max-width: 800px;
+  padding-left: 5px;
   margin: 40px auto 0;
 }
 
@@ -274,15 +275,15 @@ display: inline-flex;
 
 /* form element styles */
 input {
-  display: block;
+  display: inline-block;
   margin: 8px 0;
   padding: 8px 2px;
   border-width: 0 0 2px 0;
-  width: 100%;
+  width: 85%;
 }
 
 target a {
-  margin-left: 1px;
+  margin: 5px;
   color: rgb(0, 0, 0);
   border-bottom: 2px solid #ff6600;
   padding: 0px;
@@ -315,6 +316,11 @@ button {
   z-index: 1;
 }
 
+.box {
+  padding-top: 10px;
+  margin-left: 2px;
+      }
+      
 .auth.open {
   display: block;
 }
@@ -437,6 +443,12 @@ button {
   justify-content: flex-start;
 }
 
+/* code  styles */
+.lowlight {
+  font-size: 12px;
+  word-break: break-all;
+}
+
 /* request list styles */
 .prof {
   padding: 20px;
@@ -504,7 +516,7 @@ direction: ltr;
     }
 
     #footer {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       width: 100%;
       background-color: #f5f5f5;
