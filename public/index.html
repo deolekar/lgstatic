@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LinkinGuru</title>
-    <!-- stylesheets -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="/images/favicon.ico" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="icon" href="/images/favicon.ico" />
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div id="nav-placeholder"></div>
-        <script>
-          $(function () {
-            $("#nav-placeholder").load("nav.html");
-          });
-        </script>
-      </nav>
-    </header>
-    <section class="content">
-      <webtitle>
-        <h1>Linkin search</h1>
-      </webtitle>
-      <form class="formLkp" id="formLkp" method="post" >
-        <div id="idTrgt" onclick="return submitUserForm();">
-          <input type="text" id="quantity" name="sourceUrl" placeholder="Your URL" />
-          <span id="idSearch" class="search-linkin material-icons" style="display: none;" >search</span> </br>
-            <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfIwZUjAAAAAK52Fa_zecbSoK2ijBnceMHaXUYc" data-callback="verifyCaptcha"></div>
-            
-            <div id="g-recaptcha-error"></div>
-          <div id="review_recaptcha"></div>
-          <div class="box">         <div class="box"></div>
-            <target>
-              <a target="_blank" id="idTarget" href="https://www.linkinguru.com" class="urlTarget">
-              </a>
-            </target>
-            <span id="idTargetIcon" title="Verification Status" class="material-icons1 "></span>
-          </div>
-          </br>
-          <span id="idTargetUrl" class="text lowlight"></span>
-        </div>
-        </div>
-        <p class="error"></p>
-        </div>
-      </form>
-  
-    </section>
-  </body>
-  <ftr>
-    <div id="footer-placeholder"></div>
-    <script>
-      $(function () {
-        $("#footer-placeholder").load("footer.html");
-      });
-    </script>
-  </ftr>
+<head>
+  <script
+    type="text/javascript"
+    src="https://app.termly.io/embed.min.js"
+    data-auto-block="on"
+    data-website-uuid="89222a76-c59c-4d74-a147-c1a8bf708a7c"
+  ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LinkinGuru</title>
+  <!-- stylesheets -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="/images/favicon.ico" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="icon" href="/images/favicon.ico" />
+</head>
 
-  <!--script type="text/javascript">
+<body>
+  <header>
+    <nav>
+      <div id="nav-placeholder"></div>
+      <script>
+        $(function () {
+          $("#nav-placeholder").load("nav.html");
+        });
+      </script>
+    </nav>
+  </header>
+  <section class="content">
+    <webtitle>
+      <h1>Linkin search</h1>
+    </webtitle>
+    <form class="formLkp" id="formLkp" method="post">
+      <div id="idTrgt" onclick="return submitUserForm();">
+        <input type="text" id="quantity" name="sourceUrl" placeholder="Your URL" />
+        <span id="idSearch" class="search-linkin material-icons" style="display: none;">search</span> </br>
+        <div id="g-recaptcha" class="g-recaptcha" data-sitekey="6LfIwZUjAAAAAK52Fa_zecbSoK2ijBnceMHaXUYc"
+          data-callback="verifyCaptcha"></div>
+
+        <div id="g-recaptcha-error"></div>
+        <div id="review_recaptcha"></div>
+        <div class="box">
+          <div class="box"></div>
+          <target>
+            <a target="_blank" id="idTarget" href="https://www.linkinguru.com" class="urlTarget">
+            </a>
+          </target>
+          <span id="idTargetIcon" title="Verification Status" class="material-icons1 "></span>
+        </div>
+        </br>
+        <span id="idTargetUrl" class="text lowlight"></span>
+      </div>
+      </div>
+      <p class="error"></p>
+      </div>
+    </form>
+
+  </section>
+
+
+</body>
+<ftr>
+  <div id="footer-placeholder"></div>
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("footer.html");
+    });
+  </script>
+</ftr>
+
+<!--script type="text/javascript">
       var review_recaptcha_widget;
       var onloadCallback = function() {
         console.log("in captcha");
@@ -85,59 +93,69 @@
 </form-->
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script>
-var recaptcha_response = '';
-function submitUserForm() {
-  if(recaptcha_response.length == 0) {
+  var recaptcha_response = '';
+  function submitUserForm() {
+    if (recaptcha_response.length == 0) {
       document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">We know you are not robot, but we cannot argue with our manager. </span>';
       return false;
+    }
+    return true;
   }
-  return true;
-}
 
-function verifyCaptcha(token) {
-  recaptcha_response = token;
-  document.getElementById('g-recaptcha-error').innerHTML = '';
-  document.getElementById("idSearch").style.display = "inline";
-  document.getElementById("g-recaptcha").style.display = "none";
-}
+
+
+  function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+    document.getElementById("idSearch").style.display = "inline";
+    document.getElementById("g-recaptcha").style.display = "none";
+  }
 </script>
 
-  </script>
-  </script>
-  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-  <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-  <script src="/__/firebase/7.7.0/firebase-functions.js"></script>
-  <script src="/__/firebase/init.js"></script>
+</script>
+</script>
+<script src="/__/firebase/7.7.0/firebase-app.js"></script>
+<script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+<script src="/__/firebase/7.7.0/firebase-functions.js"></script>
+<script src="/__/firebase/init.js"></script>
 
-  <script src="js/staticApp.js"></script>
-  <!--script src="/js/fetch/api.js"></script-->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-    import {
-      getAnalytics,
-      logEvent,
-    } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-    //import { getAnalytics, logEvent } from "firebase/analytics";
+<script src="js/staticApp.js"></script>
+<!--script src="/js/fetch/api.js"></script-->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import {
+    getAnalytics,
+    logEvent,
+  } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+  //    const { initializeAppCheck, ReCaptchaV3Provider } = require("firebase/app-check");
+  //import { getAnalytics, logEvent } from "firebase/analytics";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyD42WGXuff55DmePy9ENcZF7Q1Lb9xbgJ4",
-      authDomain: "linkinguru22-b6df4.firebaseapp.com",
-      projectId: "linkinguru22-b6df4",
-      storageBucket: "linkinguru22-b6df4.appspot.com",
-      messagingSenderId: "402464233259",
-      appId: "1:402464233259:web:dc17710149371547df176e",
-      measurementId: "G-0XDF7ZFVB2",
-    };
+  const firebaseConfig = {
+    apiKey: "AIzaSyD42WGXuff55DmePy9ENcZF7Q1Lb9xbgJ4",
+    authDomain: "linkinguru22-b6df4.firebaseapp.com",
+    projectId: "linkinguru22-b6df4",
+    storageBucket: "linkinguru22-b6df4.appspot.com",
+    messagingSenderId: "402464233259",
+    appId: "1:402464233259:web:dc17710149371547df176e",
+    measurementId: "G-0XDF7ZFVB2",
+  };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    let myContext = "AD: Init";
-    const analytics = getAnalytics(app);
-    window.logMyEvent = function logMe(myContext) {
-      logEvent(analytics, myContext, {
-        content_type: "image",
-        content_id: "P12453",
-      });
-    };
-  </script>
+  //    const appCheck = initializeAppCheck(app, {
+  //      provider: new ReCaptchaV3Provider('6LfsPKgjAAAAAAYiqPUKiL4EP1-2BXRXVTf-ZMS0'),
+  ////provider: new ReCaptchaV3Provider('6LdxaqYjAAAAAMRgrF0lhqxTruEosaZr641Nsxoa'),
+  //      isTokenAutoRefreshEnabled: true
+  //    });
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  let myContext = "AD: Init";
+  const analytics = getAnalytics(app);
+  window.logMyEvent = function logMe(myContext) {
+    logEvent(analytics, myContext, {
+      content_type: "image",
+      content_id: "P12453",
+    });
+  };
+</script>
+
 </html>
