@@ -21,14 +21,6 @@ h2 {
   text-align: left;
 }
 
-h6 {
-  color: rgb(185, 185, 185);
-  font-family: Consolas, Arial;
-  text-decoration: none;
-  text-align: left;
-  padding: 0px;
-}
-
 h5 {
   color: rgb(185, 185, 185);
   font-family: Consolas, Arial;
@@ -69,29 +61,7 @@ ft {
   padding: 5px;
   cursor: pointer;
   margin-left: 1px;
-  margin-right: 1px;
-}
-
-.imgt {
-  margin: 1px;
-  padding: 5px;
-  width: 15%;
-  height: 15%;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-ht {
-  color: rgb(160, 160, 160);
-  font-family: Consolas, Arial;
-  text-decoration: none;
-  text-align: left;
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
+  margin-right: 10px;
 }
 
 /* header styles */
@@ -121,51 +91,11 @@ header a:hover {
   color: rgb(255, 255, 255);
 }
 
-/*.footer {
-  position: absolute;
-  margin: 40px auto 0;
-  padding: 4px;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f5f5f5;
-display: inline-flex;
-}*/
-
 /* content styles */
 .content {
   max-width: 800px;
   padding-left: 5px;
   margin: 40px auto 0;
-}
-
-/* request list styles */
-.request-list li {
-  padding: 5px;
-  margin: 5px;
-  list-style-type: none;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-}
-
-.request-list .votes {
-  position: relative;
-  top: -5px;
-  z-index: 0;
-}
-
-.request-list .upvote {
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.request-list .upvote:active {
-  color: black;
-  background: #ff6600;
 }
 
 /* modal styles */
@@ -181,56 +111,6 @@ display: inline-flex;
   overflow-y: auto;
 }
 
-.modal2 {
-  color: #555;
-  font-family: Consolas, Arial;
-  text-decoration: none;
-  text-align: left;
-  width: 80%;
-  padding: 30px;
-  margin: 100px auto;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  height: 75%;
-  overflow-y: auto;
-}
-
-.modal1 {
-  width: 300px;
-  padding: 30px;
-  margin: 100px auto;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 500px;
-  overflow-y: auto;
-}
-
-
-.new-request {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  display: none;
-}
-
-.new-request.open {
-  display: block;
-}
-
-.modak {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  display: none;
-}
-
 .hashcode.open {
   display: block;
 }
@@ -242,22 +122,6 @@ display: inline-flex;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
   display: none;
-}
-
-.modak.open {
-  display: block;
-}
-.profile {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  display: none;
-}
-
-.profile.open {
-  display: block;
 }
 
 .signin-request {
@@ -338,60 +202,6 @@ button {
   display: block;
 }
 
-/* auth styles */
-.setreset {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: #fafafa;
-  display: none;
-  z-index: 1;
-}
-
-.setreset.open {
-  display: block;
-}
-
-.setreset a {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.setreset .modal {
-  display: none;
-}
-
-.setreset .modal.active {
-  display: block;
-}
-
-/* auth styles */
-.reg {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: #fafafa;
-  display: none;
-  z-index: 1;
-}
-
-.reg.open {
-  display: block;
-}
-
-.reg a {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.reg .modal {
-  display: none;
-}
-
-.reg .modal.active {
-  display: block;
-}
-
 
 /* notification */
 .notification {
@@ -425,6 +235,29 @@ button {
   justify-content: space-between;
 }
 
+/* keyLkp form*/
+.keyLkp {
+  padding: 20px;
+  margin: 20px;
+  list-style-type: none;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+/* land form*/
+.land {
+  padding: 20px;
+  margin: 20px;
+  list-style-type: none;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  max-width: 800px;
+}
 
 #idUpdate {
   display: none;
@@ -447,38 +280,6 @@ button {
 .lowlight {
   font-size: 12px;
   word-break: break-all;
-}
-
-/* request list styles */
-.prof {
-  padding: 20px;
-  margin: 10px auto;
-  list-style-type: none;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: flex-start;
-}
-
-.close-button {
-  white-space: nowrap;
-  margin-top: 10px;
-  padding: 8px 12px;
-  color: rgb(255, 255, 255);
-  background: #ff6600;
-  border: 0;
-  font-weight: bold;
-  font-family: inherit;
-  cursor: pointer;
-}
-
-.topright {
-    float: right;
-    display: block;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 5px;
 }
 
 .material-icons {
@@ -550,3 +351,93 @@ direction: ltr;
   .grey {
     color: #555;
   }
+
+  /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.notes {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.season_tabs {
+  position: relative;   
+  min-height: 500px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.season_tab {
+  float: left;  
+  clear: both;
+  width: 286px;
+}
+.season_tab label {
+    background: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    font-size: 15px;
+    vertical-align: middle;
+    position: relative;
+    left: 1px;
+    width: 64px;
+    height: 30px;
+    display: table-cell;
+}
+.season_tab [type=radio] {
+  display: none;   
+}
+.season_content {
+  position: absolute;
+  top: 0;
+  left: 86px;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+ }
+.season_content span {
+  animation: 0.5s ease-out 0s 1 slideInFromTop; 
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 2px solid #ff6600;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .season_content {
+  z-index: 1;
+}
